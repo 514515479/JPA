@@ -70,4 +70,21 @@ public class PetController {
     public Result findByIdBetween() {
         return Result.success(petDao.findByIdBetweenOrderById(1, 2));
     }
+
+    @GetMapping("/jpql")
+    public Result jpql() {
+        return Result.success(petDao.loadPetsList());
+    }
+
+    @GetMapping("/jpql2")
+    public Result jpql2() {
+        List<Object[]> pet = petDao.loadPetsList2();
+        return Result.success(pet);
+    }
+
+    @GetMapping("/jpql3")
+    public Result jpql3() {
+        List<Object[]> pet = petDao.loadPetsList3();
+        return Result.success(pet);
+    }
 }

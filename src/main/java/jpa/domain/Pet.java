@@ -1,6 +1,8 @@
 package jpa.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -10,6 +12,8 @@ import javax.persistence.*;
  **/
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity(name = "t_pet")  //实体类和数据库表的关系映射
 public class Pet {
 
